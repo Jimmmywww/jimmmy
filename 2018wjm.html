@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- including ECharts file -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- prepare a DOM container with width and height -->
+    <div id="main" style="width: 1200px;height:400px;"></div>
+    <script>
+        // based on prepared DOM, initialize echarts instance
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            title:{
+                text:"2018各省市城乡公共厕所数量图表"
+            },
+            tooltip:{},
+            legend:{data:["厕所总数"]},
+            xAxis:{data:["江苏","河南","内蒙古","广东","河北","浙江","山东","云南","陕西","四川","黑龙江","湖南","湖北","福建","上海","安徽","辽宁","北京","重庆","吉林","山西","江西","贵州","新疆","甘肃","广西","天津","海南","西藏","宁夏","青海"]},
+            yAxis:{},
+
+        series:[
+        {
+ 
+           name:"厕所总数",
+  
+                      type:"bar",
+  
+                      data:[15782,14783,12503,11218,10111,9631,9163,9011,9008,8325,7637,6655,6556,6063,6061,6031,5482,5270,4847,4422,4351,4204,3673,3606,3349,2485,1384,1253,1249,1208,1175]
+                      }
+     ]
+}
+
+
+  myChart.setOption(option);
+    </script>
+</body>
+</html>
